@@ -247,7 +247,7 @@ if(CONFIG_ETH_MCUX)
   #zephyr_library_sources(mcux-sdk/components/phy/mdio/enet/fsl_enet_mdio.c)
 endif()
 
-if (CONFIG_USB_DEVICE_DRIVER)
+if (CONFIG_USB_DEVICE_DRIVER OR CONFIG_UDC_DRIVER)
   list(APPEND CMAKE_MODULE_PATH
     ${CMAKE_CURRENT_LIST_DIR}/middleware/mcux-sdk-middleware-usb
   )
